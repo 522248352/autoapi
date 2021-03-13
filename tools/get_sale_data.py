@@ -11,11 +11,11 @@ from tools.read_yaml import read_yaml
 def getSaleData():
 
     # 获取公共参数,返回是 生成器，需转型
-    commDatas = read_yaml("../data/commondata_sale.yml")
+    commDatas = read_yaml("commondata_sale.yml")
     commData = [i for i in commDatas]
 
     # 获取特别参数，返回是 生成器
-    otherDatas = read_yaml("../data/sale.yml")
+    otherDatas = read_yaml("sale.yml")
     casename = []
     data = []
     mark = []
