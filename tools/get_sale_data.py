@@ -1,7 +1,6 @@
 import time
 from random import randint
 
-
 import tools
 from tools import data_encrypt
 from tools.data2pytest import dataToPytest
@@ -9,7 +8,6 @@ from tools.read_yaml import read_yaml
 
 
 def getSaleData():
-
     # 获取公共参数,返回是 生成器，需转型
     commDatas = read_yaml("commondata_sale.yml")
     commData = [i for i in commDatas]
@@ -33,18 +31,19 @@ def getSaleData():
                       i["datas"]["year"] + i["datas"]["month"] + i["datas"]["cvv"] + \
                       i["datas"]["email"] + i["datas"]["keys"]
 
-        sign = data_encrypt.dataEncrypt(encryptData)    
+        sign = data_encrypt.dataEncrypt(encryptData)
         i["datas"]["sign"] = sign
-        
+
         casename.append(i["casenames"])
         data.append(i["datas"])
         marks = i["marks"]
-        markList = []
+        marklist = []
         for j in marks:
-            markList.append(tools.dicData[j])
-        mark.append(markList)
-    allData =  zip(casename, data, mark)
+            marklist.append(tools.dicData[j])
+        mark.append(marklist)
+    allData = zip(casename, data, mark)
     return dataToPytest(allData)
+
 
 if __name__ == "__main__":
     a = getSaleData()
