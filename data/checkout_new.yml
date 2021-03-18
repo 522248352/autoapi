@@ -1,0 +1,42 @@
+---
+    casenames: "ECP_NewCheckout_API"
+    params_one:
+        merchantNo: "21690"
+        subAccount: "21690004"
+        transactionId: ""
+        amount: "2"
+        keys: "96D918NXi8d3MIbhC72zN0y01M6J93"
+    params_two:
+        cardNumber: "4200000000000000"
+    marks:
+        - ecpNew
+        - ecp
+...
+---
+    casenames: "SafeCharge_NewCheckout_API"
+    params_one:
+        merchantNo: "21690"
+        subAccount: "21690001"
+        transactionId: ""
+        amount: "12.56"
+        keys: "p48eN5249K4c7g629H38Gdr15v725h"
+    params_two:
+        cardNumber: "4000023104662535"
+    marks:
+        - safechargeNew
+        - safecharge
+...
+---
+    casenames: "Trustpay_NewCheckout_API"
+    params_one:
+        merchantNo: "21687"
+        subAccount: "21687005"
+        transactionId: ""
+        amount: "12.56"
+        keys: "p3d05x8Txoc6UlCMC3gl611g9n8a8j"
+    params_two:
+        cardNumber: "4200000000000000"
+    marks:
+        - trustpayNew
+        - trustpay
+...

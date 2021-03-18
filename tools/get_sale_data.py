@@ -1,6 +1,5 @@
 import time
 from random import randint
-
 import tools
 from tools import data_encrypt
 from tools.data2pytest import dataToPytest
